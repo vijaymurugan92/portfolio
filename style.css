@@ -1,3 +1,10 @@
+/* CSS Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -15,6 +22,7 @@ header {
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -27,12 +35,27 @@ nav ul li a {
     text-decoration: none;
 }
 
+nav ul li a:hover {
+    background-color: black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+nav ul li a:active {
+    color: red;
+}
+
 section {
     padding: 20px;
     margin: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
+section h2 {
+    margin-top: 0;
+}
+
 section h4 {
     text-align: center;
 }
@@ -46,17 +69,16 @@ h2 {
     justify-content: space-around;
     flex-wrap: nowrap;
     margin: 10px 0;
-    
 }
 
 .skills-box {
     background: #fff;
     border-radius: 5px;
-    box-shadow: 10px 10px rgba(107, 58, 223, 0.1);
+    box-shadow: 1px 1px rgba(107, 58, 223, 0.1);
     padding: 20px;
     margin: 10px;
-    flex: 1 1 30%;
-    
+    flex-basis: 30%;
+    transition: box-shadow 0.3s ease-in-out;
 }
 
 .skills-box h3 {
@@ -72,12 +94,6 @@ h2 {
 .skills-box ul li {
     margin: 5px 0;
 }
-nav ul li a:hover {
-    background-color:black;
-}
-nav ul li a:active{
-    color: red;
-}
 
 .skills-box:hover {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -87,5 +103,10 @@ footer {
     text-align: center;
     padding: 10px 0;
     background: #333;
-    color:white;
+    color: white;
+    clear: both;
+}
+
+footer p {
+    margin-bottom: 0;
 }
